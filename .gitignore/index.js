@@ -15,7 +15,7 @@ bot.on('message', function (message) {
 
 bot.on('guildMemberAdd', member => {
     member.guild.channels.get('146281705949364224').send(' Bienvenue ' + member.user + ' dans la Secte. ')
-    member.guild.channels.get('146281705949364224').send('Nous sommes désormais ' + member.guild.memberCount + ' personnes ;)' );
+    member.guild.channels.get('146281705949364224').send('Nous sommes désormais ' + member.guild.memberCount + ' personnes :wink: ' );
  })
 
 bot.on('guildMemberRemove', member => {
