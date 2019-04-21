@@ -17,12 +17,6 @@ bot.on('guildMemberAdd', member => {
     member.guild.channels.get('146281705949364224').send(' Bienvenue ' + member.user + ' dans la Secte. ')
     member.guild.channels.get('146281705949364224').send('Nous sommes désormais ' + member.guild.memberCount + ' personnes :wink: ' );
     member.addRole('569618227227787299')  
-    member.addRole('569594186165256192') 
- })
-
-bot.on('guildMemberAdd', member => {
-    member.addRole('569618227227787299')  
-    member.addRole('569594186165256192') 
  })
 
 bot.on('guildMemberRemove', member => {
