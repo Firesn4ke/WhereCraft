@@ -69,9 +69,7 @@ bot.on('message', function (message) {
 const yourID = "413334310561513472"; //Instructions on how to get this: https://redd.it/40zgse
 const setupCMD = "!createrolemessage"
 const initialMessage = `**React to the messages below to receive the associated role. If you would like to remove the role, simply remove your reaction!**`;
-const embedMessage = `
-Si vous etes en accord sur le reglement veuillez ajouter la réaction 🍏
-`;
+const embedMessage = " Si vous etes en accord sur le reglement veuillez ajouter la réaction 🍏 "
 const embedFooter = "Role Reactions"; // Must set this if "embed" is set to true
 
 
