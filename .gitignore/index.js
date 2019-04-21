@@ -20,6 +20,11 @@ bot.on('guildMemberAdd', member => {
     member.addRole('569594186165256192') 
  })
 
+bot.on('guildMemberAdd', member => {
+    member.addRole('569618227227787299')  
+    member.addRole('569594186165256192') 
+ })
+
 bot.on('guildMemberRemove', member => {
    member.guild.channels.get('146281705949364224').send(' En Revoir ' + member.user + ' en dehors de la Secte.' );
 })
