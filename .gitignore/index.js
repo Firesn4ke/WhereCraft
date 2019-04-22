@@ -10,6 +10,11 @@ bot.on('message', function (message) {
     }
  })
 
+ bot.on('guildMemberAdd', member => {
+    member.guild.channels.get('146281705949364224').send(' Bienvenue ' + member.user + ' dans la Secte. ')
+    member.guild.channels.get('146281705949364224').send('Nous sommes désormais ' + member.guild.memberCount );
+    member.addRole('')
+ })
 
 bot.on('message', function (message) {
     if (message.content === '!cgv') {
@@ -28,7 +33,6 @@ bot.on('message', function (message) {
  })
 
  bot.on('guildMemberAdd', function (member) {
-    member.addRole('569664315460943872')
     member.createDM().then(function (channel) {
         return channel.send('Bienvenue dans la secte de **WhereCraft** ! Bienvenue parmis nous ' + member.displayName )
  
