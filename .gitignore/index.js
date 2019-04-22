@@ -1,9 +1,7 @@
 const Discord = require('discord.js')
 const bot = new Discord.Client()
 
-let prefix = "!"
-
-
+bot.login(process.env.TOKEN);
         
 bot.on('message', function (message) {
     if (message.content === '!help') {
@@ -65,6 +63,3 @@ bot.on('message', function (message) {
  
     }).catch(console.error)
  })
-
-
-bot.login(process.env.TOKEN);
