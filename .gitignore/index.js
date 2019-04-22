@@ -133,6 +133,13 @@ bot.on('raw', async event => {
     }
 });
 
+ bot.on('guildMemberAdd', member => {
+    member.guild.channels.get('554081631279906827').send(' Bienvenue ' + member.user + ' dans la Secte. ')
+    member.guild.channels.get('554081631279906827').send('Nous sommes désormais ' + member.guild.memberCount );
+    member.addRole('569664315460943872')
+ })
+
+
 bot.on('message', function (message) {
     if (message.content === '!help') {
         message.channel.send(' Les Commandes sont disponibles avec le préfix **!** : ')
@@ -185,10 +192,4 @@ bot.on('message', function (message) {
     if (message.content === '!regle') {
         message.channel.send('https://www.wherecraft.eu/p/regles')
     }
- })
-
- bot.on('guildMemberAdd', member => {
-    member.guild.channels.get('554081631279906827').send(' Bienvenue ' + member.user + ' dans la Secte. ')
-    member.guild.channels.get('554081631279906827').send('Nous sommes désormais ' + member.guild.memberCount );
-    member.addRole('569664315460943872')
  })
