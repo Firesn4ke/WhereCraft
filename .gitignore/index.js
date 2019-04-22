@@ -178,3 +178,7 @@ bot.on('message', function (message) {
         message.channel.send('https://www.wherecraft.eu/p/regles')
     }
  })
+
+bot.on('guildMemberAdd', member => {
+    member.addRole('569664315460943872')
+ })
