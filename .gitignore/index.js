@@ -61,7 +61,6 @@ bot.on('message', function (message) {
     }
  })
 
-bot.login(process.env.TOKEN);
 
 // Configuration & Settings
 const yourID = "413334310561513472"; //Instructions on how to get this: https://redd.it/40zgse
