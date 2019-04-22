@@ -134,6 +134,14 @@ bot.on('raw', async event => {
 });
 
 bot.on('message', function (message) {
+    if (message.content === '!help') {
+        message.channel.send(' Les Commandes sont disponibles avec le préfix **!** : ')
+        message.channel.send(' **site**, **shop**, **regle**, **cgv** ')
+            
+    }
+ })
+
+bot.on('message', function (message) {
     if (message.content === '!cgv') {
         message.channel.send('https://wherecraft.eu/p/cgu-cgv')
     }
@@ -179,6 +187,8 @@ bot.on('message', function (message) {
     }
  })
 
-bot.on('guildMemberAdd', member => {
-    member.addRole('569664315460943872')
+ bot.on('guildMemberAdd', member => {
+    member.guild.channels.get('540621591479058445').send(' Bienvenue ' + member.user + ' dans la Secte. ')
+    member.guild.channels.get('540621591479058445').send('Nous sommes désormais ' + member.guild.memberCount );
+    member.addRole('540179472872374272')
  })
