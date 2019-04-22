@@ -3,7 +3,7 @@ const bot = new Discord.Client()
 
 let prefix = "!"
 
-bot.login(process.env.TOKEN);
+
         
 bot.on('message', function (message) {
     if (message.content === '!help') {
@@ -14,10 +14,11 @@ bot.on('message', function (message) {
  })
 
 bot.on('guildMemberAdd', member => {
-    member.guild.channels.get('146281705949364224').send(' Bienvenue ' + member.user + ' dans la Secte. ')
-    member.guild.channels.get('146281705949364224').send('Nous sommes désormais ' + member.guild.memberCount );
-    member.addRole('569664315460943872')
+    member.guild.channels.get('540621591479058445').send(' Bienvenue ' + member.user + ' dans la Secte. ')
+    member.guild.channels.get('540621591479058445').send('Nous sommes désormais ' + member.guild.memberCount );
+    member.addRole('540179472872374272')
  })
+
 
 bot.on('guildMemberRemove', member => {
    member.guild.channels.get('146281705949364224').send(' En Revoir ' + member.user + ' en dehors de la Secte.' );
@@ -64,3 +65,6 @@ bot.on('message', function (message) {
  
     }).catch(console.error)
  })
+
+
+bot.login(process.env.TOKEN);
