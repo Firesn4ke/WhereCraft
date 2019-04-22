@@ -156,3 +156,25 @@ bot.on('message', function (message) {
  
     }).catch(console.error)
  })
+
+bot.on('guildMemberRemove', member => {
+   member.guild.channels.get('146281705949364224').send(' En Revoir ' + member.user + ' en dehors de la Secte.' );
+})
+
+bot.on('message', function (message) {
+    if (message.content === '!site') {
+        message.channel.send('https://www.wherecraft.eu')
+    }
+ })
+
+bot.on('message', function (message) {
+    if (message.content === '!shop') {
+        message.channel.send('https://www.wherecraft.eu/shop')
+    }
+ })
+
+bot.on('message', function (message) {
+    if (message.content === '!regle') {
+        message.channel.send('https://www.wherecraft.eu/p/regles')
+    }
+ })
