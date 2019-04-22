@@ -133,3 +133,26 @@ bot.on('raw', async event => {
     }
 });
 
+bot.on('message', function (message) {
+    if (message.content === '!cgv') {
+        message.channel.send('https://wherecraft.eu/p/cgu-cgv')
+    }
+ })
+
+
+bot.on('message', function (message) {
+    if (message.content === '!numberplayer') {
+        message.channel.send( 'Il y a ' + message.guild.memberCount + ' joueurs sur le serveur Discord ;)')
+    }
+ })
+
+ bot.on('ready', function () {
+    bot.user.setActivity('Commande : !help').catch(console.error)
+ })
+
+ bot.on('guildMemberAdd', function (member) {
+    member.createDM().then(function (channel) {
+        return channel.send('Bienvenue dans la secte de **WhereCraft** ! Bienvenue parmis nous ' + member.displayName )
+ 
+    }).catch(console.error)
+ })
