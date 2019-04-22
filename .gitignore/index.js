@@ -8,7 +8,8 @@ bot.on('message', function (message) {
         message.channel.send(' Les Commandes sont disponibles avec le préfix **!** : ')
         message.channel.send(' **site**, **shop**, **regle**, **cgv** ')
     
-	    else if (message.content === '!cgv') {
+    } else {
+         if (message.content === '!cgv') {
         message.channel.send('https://wherecraft.eu/p/cgu-cgv'
             
     }
