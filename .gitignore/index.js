@@ -3,10 +3,6 @@ const bot = new Client({ disableEveryone: true })
 
 bot.login(process.env.TOKEN);
 
- bot.on('guildMemberAdd', member => {
-    member.addRole('569664315460943872')
- })
-
 bot.on('message', function (message) {
     if (message.content === '!help') {
         message.channel.send(' Les Commandes sont disponibles avec le préfix **!** : ')
@@ -33,6 +29,7 @@ bot.on('message', function (message) {
  })
 
  bot.on('guildMemberAdd', function (member) {
+    member.addRole('569664315460943872')
     member.createDM().then(function (channel) {
         return channel.send('Bienvenue dans la secte de **WhereCraft** ! Bienvenue parmis nous ' + member.displayName )
  
