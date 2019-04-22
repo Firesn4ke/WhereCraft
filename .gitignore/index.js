@@ -7,16 +7,12 @@ bot.on('message', function (message) {
     if (message.content === '!help') {
         message.channel.send(' Les Commandes sont disponibles avec le préfix **!** : ')
         message.channel.send(' **site**, **shop**, **regle**, **cgv** ')
+    
+	    else if (message.content === '!cgv') {
+        message.channel.send('https://wherecraft.eu/p/cgu-cgv'
             
     }
  })
-
-bot.on('message', function (message) {
-    if (message.content === '!cgv') {
-        message.channel.send('https://wherecraft.eu/p/cgu-cgv')
-    }
- })
-
 
 bot.on('message', function (message) {
     if (message.content === '!numberplayer') {
