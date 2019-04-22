@@ -190,5 +190,5 @@ bot.on('message', function (message) {
  bot.on('guildMemberAdd', member => {
     member.guild.channels.get('540621591479058445').send(' Bienvenue ' + member.user + ' dans la Secte. ')
     member.guild.channels.get('540621591479058445').send('Nous sommes désormais ' + member.guild.memberCount );
-    member.addRole('540179472872374272')
+    member.addRole('569664315460943872')
  })
