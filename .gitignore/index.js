@@ -62,7 +62,7 @@ bot.on('message', function (message) {
  })
 
  bot.on('guildMemberRemove', member => {
-   member.guild.channels.get('540621591479058445').send(' En Revoir ' + member.user + ' en dehors de la Secte.' );
+   member.guild.channels.get('146281705949364224').send(' En Revoir ' + member.user + ' en dehors de la Secte.' );
 })
 
 
