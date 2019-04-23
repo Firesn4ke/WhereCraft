@@ -1,30 +1,20 @@
 const { Client, RichEmbed } = require('discord.js');
 const bot = new Client({ disableEveryone: true })
 
+let prefix = "!"
+
 bot.login(process.env.TOKEN);
 
 bot.on('message', function (message) {
     if (message.content === '!help') {
-        message.channel.send(' Les Commandes sont disponibles avec le préfix **!** : ')
-        message.channel.send(' **site**, **shop**, **regle**, **cgv** ')    
+        message.channel.send('Les commandes disponibles sont : !numberplayer')
     }
  })
 
- bot.on('guildMemberAdd', member => {
-    member.guild.channels.get('146281705949364224').send(' Bienvenue ' + member.user + ' dans la Secte. ')
-    member.guild.channels.get('146281705949364224').send('Nous sommes désormais ' + member.guild.memberCount );
-    member.addRole('')
- })
-
-bot.on('message', function (message) {
-    if (message.content === '!cgv') {
-        message.channel.send('https://wherecraft.eu/p/cgu-cgv')
-    }
- })
 
 bot.on('message', function (message) {
     if (message.content === '!numberplayer') {
-        message.channel.send( 'Il y a ' + message.guild.memberCount + ' joueurs sur le serveur Discord ;)')
+        message.channel.send( 'Il y a ' + message.guild.memberCount + ' joueurs :video_game: sur ce serveur')
     }
  })
 
@@ -34,39 +24,30 @@ bot.on('message', function (message) {
 
  bot.on('guildMemberAdd', function (member) {
     member.createDM().then(function (channel) {
-        return channel.send('Bienvenue dans la secte de **WhereCraft** ! Bienvenue parmis nous ' + member.displayName )
+        return channel.send('Bienvenue dans la secte Overwatch ! N hésite pas a donner tes 3 principaux main ainsi que ton rang dans le channel presentation ' + member.displayName )
  
     }).catch(console.error)
  })
 
-bot.on('guildMemberRemove', member => {
-   member.guild.channels.get('146281705949364224').send(' En Revoir ' + member.user + ' en dehors de la Secte.' );
+ bot.on('guildMemberAdd', member => {
+    member.guild.channels.get('146281705949364224').send(' Bienvenue ' + member.user + ' dans la Secte. ')
+    member.guild.channels.get('146281705949364224').send('Nous sommes désormais ' + member.guild.memberCount );
+    member.addRole('569594186165256192')
+ })
+
+ bot.on('guildMemberRemove', member => {
+   member.guild.channels.get('540621591479058445').send(' En Revoir ' + member.user + ' en dehors de la Secte.' );
 })
-
-bot.on('message', function (message) {
-    if (message.content === '!site') {
-        message.channel.send('https://www.wherecraft.eu')
-    }
- })
-
-bot.on('message', function (message) {
-    if (message.content === '!shop') {
-        message.channel.send('https://www.wherecraft.eu/shop')
-    }
- })
-
-bot.on('message', function (message) {
-    if (message.content === '!regle') {
-        message.channel.send('https://www.wherecraft.eu/p/regles')
-    }
- })
 
 
 // Configuration & Settings
 const yourID = "413334310561513472"; //Instructions on how to get this: https://redd.it/40zgse
 const setupCMD = "!createrolemessage"
 const initialMessage = `**React to the messages below to receive the associated role. If you would like to remove the role, simply remove your reaction!**`;
-const embedMessage = " Si vous etes en accord sur le reglement veuillez ajouter la réaction 🍏 " ;
+const embedMessage = `
+Veuillez sélectionner votre rang dans Overwatch à l'aide des réactions.
+Si votre rang a changé, veuillez retirer votre ancien emoji pour un nouveaux.
+`;
 const embedFooter = "Role Reactions"; // Must set this if "embed" is set to true
 
 
@@ -178,10 +159,10 @@ bot.on('raw', async event => {
 
                     if (fields[i].name === reaction.emoji.name) {
                         if (event.t === "MESSAGE_REACTION_ADD") {
-                            member.removeRole(role.id);
+                            member.addRole(role.id);
                             break;
                         } else {
-                            member.addRole(role.id);
+                            member.removeRole(role.id);
                             break;
                         }
                     }
@@ -189,4 +170,4 @@ bot.on('raw', async event => {
             }
         }
     }
-})
+});
