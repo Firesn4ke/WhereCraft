@@ -185,10 +185,10 @@ bot.on('raw', async event => {
 
                     if (fields[i].name === reaction.emoji.name) {
                         if (event.t === "MESSAGE_REACTION_ADD") {
-                            member.addRole(role.id);
+                            member.removeRole(role.id);
                             break;
                         } else {
-                            member.removeRole(role.id);
+                            member.addRole(role.id);
                             break;
                         }
                     }
