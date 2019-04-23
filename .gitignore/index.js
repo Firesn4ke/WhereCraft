@@ -48,7 +48,7 @@ bot.on('message', function (message) {
 
  bot.on('guildMemberAdd', function (member) {
     member.createDM().then(function (channel) {
-        return channel.send('Bienvenue dans la secte Overwatch ! N hésite pas a donner tes 3 principaux main ainsi que ton rang dans le channel presentation ' + member.displayName )
+        return channel.send('Bienvenue sur **Wherecraft**' + member.displayName )
  
     }).catch(console.error)
  })
