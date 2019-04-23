@@ -7,7 +7,31 @@ bot.login(process.env.TOKEN);
 
 bot.on('message', function (message) {
     if (message.content === '!help') {
-        message.channel.send('Les commandes disponibles sont : !numberplayer')
+        message.channel.send('Les commandes disponibles sont : !numberplayer, !site, !regle, !cgv, shop')
+    }
+ })
+
+bot.on('message', function (message) {
+    if (message.content === '!site') {
+        message.channel.send('https://www.wherecraft.eu/')
+    }
+ })
+
+bot.on('message', function (message) {
+    if (message.content === '!regle') {
+        message.channel.send('https://www.wherecraft.eu/p/regles')
+    }
+ })
+
+bot.on('message', function (message) {
+    if (message.content === '!cgv') {
+        message.channel.send('https://www.wherecraft.eu/p/cgu-cgv')
+    }
+ })
+
+bot.on('message', function (message) {
+    if (message.content === '!shop') {
+        message.channel.send('https://www.wherecraft.eu/shop')
     }
  })
 
