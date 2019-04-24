@@ -71,8 +71,7 @@ const yourID = "413334310561513472"; //Instructions on how to get this: https://
 const setupCMD = "!createrolemessage"
 const initialMessage = `**React to the messages below to receive the associated role. If you would like to remove the role, simply remove your reaction!**`;
 const embedMessage = `
-Veuillez sélectionner votre rang dans Overwatch à l'aide des réactions.
-Si votre rang a changé, veuillez retirer votre ancien emoji pour un nouveaux.
+Pour acceder à la totalité du serveur et approuver le reglement veuiller ajouter les 2 réactions suivantes 🍏 et ✅
 `;
 const embedFooter = "Role Reactions"; // Must set this if "embed" is set to true
 
