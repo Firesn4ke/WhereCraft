@@ -19,7 +19,7 @@ bot.on('message', function (message) {
 
 bot.on('message', function (message) {
     if (message.content === '!regle') {
-        message.channel.send('https://www.wherecraft.eu/p/regles')
+        message.channel.send('https://www.wherecraft.eu/p/reglement')
     }
  })
 
