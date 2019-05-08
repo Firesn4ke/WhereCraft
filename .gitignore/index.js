@@ -7,7 +7,14 @@ bot.login(process.env.TOKEN);
 
 bot.on('message', function (message) {
     if (message.content === '!help') {
-        message.channel.send('Les commandes disponibles sont : !numberplayer, !site, !regle, !cgv, shop')
+        message.channel.send('Les commandes disponibles sont : !numberplayer, !site, !regle, !cgv, !shop, !b')
+    }
+ })
+
+bot.on('message', function (message) {
+    if (message.content === '!b') {
+	message.channel.bulkDelete(parseInt(1))
+	message.reply('vous souhaite la bienvenue !')
     }
  })
 
