@@ -11,6 +11,16 @@ bot.on('message', function (message) {
     }
  })
 
+const tell = '!tell'
+
+bot.on('message', message => {
+  if (message.content.startsWith(tell)) {
+    const str = message.content.substring(tell.length)
+    message.channel.bulkDelete(parseInt(1))
+    message.channel.sendMessage(str)
+  }
+});
+
 bot.on('message', function (message) {
     if (message.content === '!b') {
 	message.channel.bulkDelete(parseInt(1))
