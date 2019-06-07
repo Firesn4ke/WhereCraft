@@ -84,10 +84,10 @@ else if (message.content === '!saltawizy') {
         message.channel.send('https://cdn.discordapp.com/attachments/541759242580000768/586637369218957323/Salt-bae_Awizy.png')
     }
 
-else if (message.content === '!saltzey') {
+else if (message.content === '!saltpolk') {
 	message.channel.bulkDelete(parseInt(1))
-	message.channel.send('Salt de ZeyliX détecté')
-        message.channel.send('https://cdn.discordapp.com/attachments/550368143923740712/582260292784881780/Salt-baeZeylix.png')
+	message.channel.send('Salt de Polkoo détecté')
+        message.channel.send('https://cdn.discordapp.com/attachments/541759242580000768/586639803160985611/Salt-bae_Polkoo.png')
     }
 	
 else if (message.content === '!saltyuri') {
