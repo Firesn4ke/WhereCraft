@@ -80,8 +80,8 @@ bot.on('message', function (message) {
 	
 else if (message.content === '!saltawizy') {
 	message.channel.bulkDelete(parseInt(1))
-	message.channel.send('Salt de Lucasaw détecté')
-        message.channel.send('https://cdn.discordapp.com/attachments/548954229365014532/582251637800960000/Salt-baeLucasaw.png')
+	message.channel.send('Salt de Awizy détecté')
+        message.channel.send('https://cdn.discordapp.com/attachments/541759242580000768/586637369218957323/Salt-bae_Awizy.png')
     }
 
 else if (message.content === '!saltzey') {
