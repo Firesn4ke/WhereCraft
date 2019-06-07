@@ -70,6 +70,65 @@ bot.on('message', function (message) {
     }).catch(console.error)
  })
 
+bot.on('message', function (message) {
+	
+    if (message.content === '!saltarthur') {
+	message.channel.bulkDelete(parseInt(1))
+	message.channel.send('Salt de Arthur détecté')
+        message.channel.send('https://cdn.discordapp.com/avatars/274222634068344833/c395493bde8c775ce3485a5fbf71b412.png')	    
+    }
+	
+else if (message.content === '!saltlucas') {
+	message.channel.bulkDelete(parseInt(1))
+	message.channel.send('Salt de Lucasaw détecté')
+        message.channel.send('https://cdn.discordapp.com/attachments/548954229365014532/582251637800960000/Salt-baeLucasaw.png')
+    }
+
+else if (message.content === '!saltzey') {
+	message.channel.bulkDelete(parseInt(1))
+	message.channel.send('Salt de ZeyliX détecté')
+        message.channel.send('https://cdn.discordapp.com/attachments/550368143923740712/582260292784881780/Salt-baeZeylix.png')
+    }
+	
+else if (message.content === '!saltyuri') {
+	message.channel.bulkDelete(parseInt(1))
+	message.channel.send('Salt de Yurika détecté')
+        message.channel.send('https://cdn.discordapp.com/attachments/550368143923740712/582260327392084033/Salt-baeYurika.png')
+    }
+	
+else if (message.content === '!saltpyro') {
+	message.channel.bulkDelete(parseInt(1))
+	message.channel.send('Salt de Pyrolaze détecté')
+        message.channel.send('https://cdn.discordapp.com/attachments/550368143923740712/582260327534559242/Salt-baePyro.png')
+    }
+	
+else if (message.content === '!saltchevre') {
+	message.channel.bulkDelete(parseInt(1))
+	message.channel.send('Salt de LaChèvre détecté')
+        message.channel.send('https://cdn.discordapp.com/attachments/550368143923740712/582260328281407489/Salt-baeLaChevre.png')
+    }
+	
+else if (message.content === '!saltblaz') {
+	message.channel.bulkDelete(parseInt(1))
+	message.channel.send('Salt de Blazrock détecté')
+        message.channel.send('https://cdn.discordapp.com/attachments/550368143923740712/582260328323088386/Salt-baeBlazrock.png')
+    }
+	
+else if (message.content === '!saltlacer') {
+	message.channel.bulkDelete(parseInt(1))
+	message.channel.send('Salt de Lacer détecté')
+        message.channel.send('https://cdn.discordapp.com/attachments/550368143923740712/582264285951033364/Salt-baeLacer.png')
+    }
+
+else if (message.content === '!saltnitro') {
+	message.channel.bulkDelete(parseInt(1))
+	message.channel.send('Salt de NitrOmega détecté')
+        message.channel.send('https://cdn.discordapp.com/attachments/540589880250597376/582608869356732446/Salt-baeNitro.png')
+    }
+	
+ })
+
+
  bot.on('guildMemberAdd', member => {
     member.guild.channels.get('146281705949364224').send(' Bienvenue ' + member.user + ' dans la Secte. ')
     member.guild.channels.get('146281705949364224').send('Nous sommes désormais ' + member.guild.memberCount );
