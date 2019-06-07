@@ -90,34 +90,10 @@ else if (message.content === '!saltpolk') {
         message.channel.send('https://cdn.discordapp.com/attachments/541759242580000768/586639803160985611/Salt-bae_Polkoo.png')
     }
 	
-else if (message.content === '!saltyuri') {
+else if (message.content === '!saltice') {
 	message.channel.bulkDelete(parseInt(1))
-	message.channel.send('Salt de Yurika détecté')
-        message.channel.send('https://cdn.discordapp.com/attachments/550368143923740712/582260327392084033/Salt-baeYurika.png')
-    }
-	
-else if (message.content === '!saltpyro') {
-	message.channel.bulkDelete(parseInt(1))
-	message.channel.send('Salt de Pyrolaze détecté')
-        message.channel.send('https://cdn.discordapp.com/attachments/550368143923740712/582260327534559242/Salt-baePyro.png')
-    }
-	
-else if (message.content === '!saltchevre') {
-	message.channel.bulkDelete(parseInt(1))
-	message.channel.send('Salt de LaChèvre détecté')
-        message.channel.send('https://cdn.discordapp.com/attachments/550368143923740712/582260328281407489/Salt-baeLaChevre.png')
-    }
-	
-else if (message.content === '!saltblaz') {
-	message.channel.bulkDelete(parseInt(1))
-	message.channel.send('Salt de Blazrock détecté')
-        message.channel.send('https://cdn.discordapp.com/attachments/550368143923740712/582260328323088386/Salt-baeBlazrock.png')
-    }
-	
-else if (message.content === '!saltlacer') {
-	message.channel.bulkDelete(parseInt(1))
-	message.channel.send('Salt de Lacer détecté')
-        message.channel.send('https://cdn.discordapp.com/attachments/550368143923740712/582264285951033364/Salt-baeLacer.png')
+	message.channel.send('Salt de IceRayZer détecté')
+        message.channel.send('https://cdn.discordapp.com/attachments/541759242580000768/586641430483697674/Salt-bae_Ice.png')
     }
 
 else if (message.content === '!saltnitro') {
