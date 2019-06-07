@@ -75,10 +75,10 @@ bot.on('message', function (message) {
     if (message.content === '!saltarthur') {
 	message.channel.bulkDelete(parseInt(1))
 	message.channel.send('Salt de Arthur détecté')
-        message.channel.send('https://cdn.discordapp.com/avatars/274222634068344833/c395493bde8c775ce3485a5fbf71b412.png')	    
+        message.channel.send('https://cdn.discordapp.com/attachments/541759242580000768/586635812834377759/Salt-bae_Arthur.png')	    
     }
 	
-else if (message.content === '!saltlucas') {
+else if (message.content === '!saltawizy') {
 	message.channel.bulkDelete(parseInt(1))
 	message.channel.send('Salt de Lucasaw détecté')
         message.channel.send('https://cdn.discordapp.com/attachments/548954229365014532/582251637800960000/Salt-baeLucasaw.png')
