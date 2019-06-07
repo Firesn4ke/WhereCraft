@@ -95,6 +95,13 @@ else if (message.content === '!saltice') {
 	message.channel.send('Salt de IceRayZer détecté')
         message.channel.send('https://cdn.discordapp.com/attachments/541759242580000768/586641430483697674/Salt-bae_Ice.png')
     }
+	
+else if (message.content === '!saltbal') {
+	message.channel.bulkDelete(parseInt(1))
+	message.channel.send('Salt de Balafre78 détecté')
+        message.channel.send('https://cdn.discordapp.com/attachments/541759242580000768/586642531677110275/Salt-bae_Bala.png')
+    }
+
 
 else if (message.content === '!saltnitro') {
 	message.channel.bulkDelete(parseInt(1))
