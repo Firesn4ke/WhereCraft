@@ -97,35 +97,16 @@ bot.on('message', function (message) {
         message.channel.send('https://cdn.discordapp.com/attachments/541759242580000768/586635812834377759/Salt-bae_Arthur.png')	    
     }
 	
-else if (message.content === '!saltawizy') {
-	message.channel.bulkDelete(parseInt(1))
-	message.channel.send('Salt de Awizy détecté')
-        message.channel.send('https://cdn.discordapp.com/attachments/541759242580000768/586637369218957323/Salt-bae_Awizy.png')
-    }
+else if (message.content === '!avatar') {
+    message.channel.bulkDelete(parseInt(1))
+    const membre = message.mentions.users.first() || message.author;
 
-else if (message.content === '!saltpolk') {
-	message.channel.bulkDelete(parseInt(1))
-	message.channel.send('Salt de Polkoo détecté')
-        message.channel.send('https://cdn.discordapp.com/attachments/541759242580000768/586639803160985611/Salt-bae_Polkoo.png')
-    }
-	
-else if (message.content === '!saltice') {
-	message.channel.bulkDelete(parseInt(1))
-	message.channel.send('Salt de IceRayZer détecté')
-        message.channel.send('https://cdn.discordapp.com/attachments/541759242580000768/586641430483697674/Salt-bae_Ice.png')
-    }
-	
-else if (message.content === '!saltbal') {
-	message.channel.bulkDelete(parseInt(1))
-	message.channel.send('Salt de Balafre78 détecté')
-        message.channel.send('https://cdn.discordapp.com/attachments/541759242580000768/586642531677110275/Salt-bae_Bala.png')
-    }
+        var embed = new Discord.RichEmbed()
+            .setTitle(`Avatare de **${membre.username}**`)
+            .setDescription(`[Télécharger](${membre.displayAvatarURL})`)
+            .setImage(membre.displayAvatarURL)
 
-
-else if (message.content === '!saltnitro') {
-	message.channel.bulkDelete(parseInt(1))
-	message.channel.send('Salt de NitrOmega détecté')
-        message.channel.send('https://cdn.discordapp.com/attachments/540589880250597376/582608869356732446/Salt-baeNitro.png')
+        message.channel.send(embed)
     }
 	
  })
