@@ -23,12 +23,12 @@ bot.on('message', message => {
 bot.on('message', function (message) {
     if (message.content === '!avatar') {
 
-        const membre = message.mentions.users.first() || message.author;
+        const str = message.content.substring(uneCommande.length)
 
         var embed = new RichEmbed()
-        .setTitle(`Avatar de **${membre.username}**`)
-        .setDescription(`[Télécharger](${membre.displayAvatarURL})`)
-        .setImage(membre.displayAvatarURL)
+        .setTitle(`Avatar de **${str.username}**`)
+        .setDescription(`[Télécharger](${str.displayAvatarURL})`)
+        .setImage(str.displayAvatarURL)
     
         message.channel.send(embed)
     }
