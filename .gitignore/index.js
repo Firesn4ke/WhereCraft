@@ -23,6 +23,20 @@ bot.on('message', message => {
 });
 
 bot.on('message', function (message) {
+    if (message.content === '!avatar') {
+
+        const membre = message.mentions.users.first() || message.author;
+
+        var embed = new Discord.RichEmbed()
+        .setTitle(`Avatare de **${membre.username}**`)
+        .setDescription(`[Télécharger](${membre.displayAvatarURL})`)
+        .setImage(membre.displayAvatarURL)
+    
+        message.channel.send(embed)
+    }
+})
+
+bot.on('message', function (message) {
     if (message.content === '!b') {
 	message.channel.bulkDelete(parseInt(1))
 	message.reply('vous souhaite la bienvenue !')
@@ -70,32 +84,6 @@ bot.on('message', function (message) {
  
     }).catch(console.error)
  })
-
-bot.on('message', function (message) {
-    if (message.content === '!avatar') {
-
-        const membre = message.mentions.users.first() || message.author;
-
-        var embed = new Discord.RichEmbed()
-        .setTitle(`Avatare de **${membre.username}**`)
-        .setDescription(`[Télécharger](${membre.displayAvatarURL})`)
-        .setImage(membre.displayAvatarURL)
-    
-        message.channel.send(embed)
-        message.delete().catch(O_o=>{});
-    }
-})
-
-bot.on('message', function (message) {
-	
-    if (message.content === '!saltarthur') {
-	message.channel.bulkDelete(parseInt(1))
-	message.channel.send('Salt de Arthur détecté')
-        message.channel.send('https://cdn.discordapp.com/attachments/541759242580000768/586635812834377759/Salt-bae_Arthur.png')	    
-    }
-	
- })
-
 
  bot.on('guildMemberAdd', member => {
     member.guild.channels.get('146281705949364224').send(' Bienvenue ' + member.user + ' dans la Secte. ')
