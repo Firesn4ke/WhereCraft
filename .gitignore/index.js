@@ -21,14 +21,14 @@ bot.on('message', message => {
 });
 
 bot.on('message', function (message) {
-    if (message.content === '!avatar') {
+    if (message.content.startsWith('!avatar')) {
 
-        const str = message.content.substring(uneCommande.length)
+	const membre = message.mentions.users.first() || message.author;
 
         var embed = new RichEmbed()
-        .setTitle(`Avatar de **${str.username}**`)
-        .setDescription(`[Télécharger](${str.displayAvatarURL})`)
-        .setImage(str.displayAvatarURL)
+        .setTitle(`Avatar de **${membre.username}**`)
+        .setDescription(`[Télécharger](${membre.displayAvatarURL})`)
+        .setImage(membre.displayAvatarURL)
     
         message.channel.send(embed)
     }
