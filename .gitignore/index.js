@@ -90,23 +90,26 @@ bot.on('message', function (message) {
  })
 
 bot.on('message', function (message) {
+    if (message.content === '!avatar') {
+
+        const membre = message.mentions.users.first() || message.author;
+
+        var embed = new Discord.RichEmbed()
+        .setTitle(`Avatare de **${membre.username}**`)
+        .setDescription(`[Télécharger](${membre.displayAvatarURL})`)
+        .setImage(membre.displayAvatarURL)
+    
+        message.channel.send(embed)
+        message.delete().catch(O_o=>{});
+    }
+})
+
+bot.on('message', function (message) {
 	
     if (message.content === '!saltarthur') {
 	message.channel.bulkDelete(parseInt(1))
 	message.channel.send('Salt de Arthur détecté')
         message.channel.send('https://cdn.discordapp.com/attachments/541759242580000768/586635812834377759/Salt-bae_Arthur.png')	    
-    }
-	
-else if (message.content === '!avatar') {
-    message.channel.bulkDelete(parseInt(1))
-    const membre = message.mentions.users.first() || message.author;
-
-        var embed = new Discord.RichEmbed()
-            .setTitle(`Avatare de **${membre.username}**`)
-            .setDescription(`[Télécharger](${membre.displayAvatarURL})`)
-            .setImage(membre.displayAvatarURL)
-
-        message.channel.send(embed)
     }
 	
  })
