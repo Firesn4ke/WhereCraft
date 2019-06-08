@@ -25,8 +25,8 @@ bot.on('message', function (message) {
 
         const membre = message.mentions.users.first() || message.author;
 
-        var embed = new Discord.RichEmbed()
-        .setTitle(`Avatare de **${membre.username}**`)
+        var embed = new RichEmbed()
+        .setTitle(`Avatar de **${membre.username}**`)
         .setDescription(`[Télécharger](${membre.displayAvatarURL})`)
         .setImage(membre.displayAvatarURL)
     
