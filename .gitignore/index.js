@@ -11,8 +11,6 @@ bot.on('message', function (message) {
     }
  })
 
-const tell = '!tell'
-
 module.exports.run = async(client, message, args) => {
 
     const membre = message.mentions.users.first() || message.author;
@@ -30,6 +28,9 @@ module.exports.run = async(client, message, args) => {
 module.exports.help = {
     name: "avatar"
 }
+
+const tell = '!tell'
+
 
 bot.on('message', message => {
   if (message.content.startsWith(tell)) {
