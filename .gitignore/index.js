@@ -1,8 +1,6 @@
 const { Client, RichEmbed } = require('discord.js');
 const bot = new Client({ disableEveryone: true })
 
-let prefix = "!"
-
 bot.login(process.env.TOKEN);
 
 bot.on('message', function (message) {
