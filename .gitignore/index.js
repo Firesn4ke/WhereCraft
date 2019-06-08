@@ -11,12 +11,6 @@ bot.on('message', function (message) {
     }
  })
 
-};
-
-module.exports.help = {
-    name: "avatar"
-}
-
 const tell = '!tell'
 
 
