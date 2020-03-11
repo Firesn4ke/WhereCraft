@@ -28,9 +28,9 @@ bot.on('message', function (message) {
     var info = new RichEmbed()
     
     .setTitle(`**Toutes les infos sur Wherecraft**`)
-    .setDescription(`Wherecraft est un serveur Minecraft moddé Survie & Automatisation.\n  Le serveur n’est disponible que avec le launcheur disponible avec la commande **!launcheur** !`)
-    .addField(`**Les liens importants :**`, `[Le Site](https://playoverwatch.com/fr-fr/)\n[Twitter Officiel](https://twitter.com/OverwatchFR?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor)\n[Acheter le Jeu](https://eu.shop.battle.net/fr-fr/product/overwatch?blzcmp=ow_buy_header)\n[La Boutique](https://gear.blizzard.com/us/game/overwatch)\n[La Boutique Overwatch League](https://shop.overwatchleague.com/)\n[Programme Overwatch League](https://overwatchleague.com/fr-fr/schedule)\n[Overwatch Contenders](https://overwatchcontenders.com/fr-fr/)\n[Overwatch Coupe du monde](https://worldcup.playoverwatch.com/fr-fr/)`)
-    .setColor('#00aaff')
+    .setDescription(`Wherecraft est un serveur Minecraft moddé Survie & Automatisation.\n  Le serveur n’est disponible que avec le launcheur disponible avec la commande **!launcheur** (pas encore disponible) !`)
+    .addField(`**Les liens importants :**`, `[Le Site](http://www.wherecraft.eu/)\n[Twitter Officiel](???)\n[La Boutique](???)
+    .setColor('#00c20a')
     message.channel.send(info)
     
   }
