@@ -29,7 +29,7 @@ bot.on('message', function (message) {
     
     .setTitle(`**Toutes les infos sur Wherecraft**`)
     .setDescription(`Wherecraft est un serveur Minecraft moddé Survie & Automatisation.\n  Le serveur n’est disponible que avec le launcheur disponible avec la commande **!launcheur** (pas encore disponible) !`)
-    .addField(`**Les liens importants :**`, `[Le Site](http://www.wherecraft.eu/)\n[Twitter Officiel](???)\n[La Boutique](???)
+    .addField(`**Les liens importants :**`, `[Le Site](http://www.wherecraft.eu/)\n[Twitter Officiel](???)\n[La Boutique](???)`)
     .setColor('#00c20a')
     message.channel.send(info)
     
