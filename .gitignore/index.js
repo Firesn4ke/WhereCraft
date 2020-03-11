@@ -27,8 +27,8 @@ bot.on('message', function (message) {
 
     var info = new RichEmbed()
     
-    .setTitle(`**Toutes les infos sur Overwatch**`)
-    .setDescription(`Overwatch est un jeu vidéo de tir en vue subjective, en équipes, en ligne, développé et publié par Blizzard Entertainment.\nLe jeu a été annoncé le 7 novembre 2014 à la BlizzCon, et a été commercialisé le 24 mai 2015 sur Windows, PlayStation 4 et Xbox One.`)
+    .setTitle(`**Toutes les infos sur Wherecraft**`)
+    .setDescription(`Wherecraft est un serveur Minecraft moddé Survie & Automatisation.\n  Le serveur n’est disponible que avec le launcheur disponible avec la commande **!launcheur** !`)
     .addField(`**Les liens importants :**`, `[Le Site](https://playoverwatch.com/fr-fr/)\n[Twitter Officiel](https://twitter.com/OverwatchFR?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor)\n[Acheter le Jeu](https://eu.shop.battle.net/fr-fr/product/overwatch?blzcmp=ow_buy_header)\n[La Boutique](https://gear.blizzard.com/us/game/overwatch)\n[La Boutique Overwatch League](https://shop.overwatchleague.com/)\n[Programme Overwatch League](https://overwatchleague.com/fr-fr/schedule)\n[Overwatch Contenders](https://overwatchcontenders.com/fr-fr/)\n[Overwatch Coupe du monde](https://worldcup.playoverwatch.com/fr-fr/)`)
     .setColor('#00aaff')
     message.channel.send(info)
