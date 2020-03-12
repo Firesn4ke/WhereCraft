@@ -219,7 +219,7 @@ bot.on('message', function (message) {
  })
 
  bot.on('ready', function () {
-    bot.user.setActivity('Bot Ow').catch(console.error)
+    bot.user.setActivity('**!info**').catch(console.error)
  })
 
  bot.on('guildMemberAdd', function (member) {
