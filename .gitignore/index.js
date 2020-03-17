@@ -29,7 +29,7 @@ bot.on('message', function (message) {
     
     .setTitle(`**Toutes les infos sur Wherecraft**`)
     .setDescription(`Wherecraft est un serveur Minecraft moddé Survie & Automatisation.\n  Le serveur n’est disponible que avec le launcheur disponible avec la commande **!launcheur** (pas encore disponible) !`)
-    .addField(`**Les liens importants :**`, `[Le Site](http://www.wherecraft.eu/)\n[Twitter Officiel](???)\n[La Boutique](???)`)
+    .addField(`**Les liens importants :**`, `[Le Site](http://www.wherecraft.eu/)\n[La Boutique](http://wherecraft.eu/shop)`)
     .setColor('#65e66e')
     message.channel.send(info)
     
@@ -71,111 +71,6 @@ bot.on('message', function (message) {
 	message.reply('vous souhaite la bienvenue !')
     }
  })
-
-bot.on('message', function (message) {
-	
-    if (message.content === '!salthoho') {
-	message.channel.bulkDelete(parseInt(1))
-	message.channel.send('Salt de Hohocraft détecté')
-        message.channel.send('https://cdn.discordapp.com/attachments/550368143923740712/582196877353549828/Hoho_Salt.png')	    
-    }
-	
-else if (message.content === '!saltlucas') {
-	message.channel.bulkDelete(parseInt(1))
-	message.channel.send('Salt de Lucasaw détecté')
-        message.channel.send('https://cdn.discordapp.com/attachments/548954229365014532/582251637800960000/Salt-baeLucasaw.png')
-    }
-
-else if (message.content === '!saltzey') {
-	message.channel.bulkDelete(parseInt(1))
-	message.channel.send('Salt de ZeyliX détecté')
-        message.channel.send('https://cdn.discordapp.com/attachments/550368143923740712/582260292784881780/Salt-baeZeylix.png')
-    }
-	
-else if (message.content === '!saltyuri') {
-	message.channel.bulkDelete(parseInt(1))
-	message.channel.send('Salt de Yurika détecté')
-        message.channel.send('https://cdn.discordapp.com/attachments/550368143923740712/582260327392084033/Salt-baeYurika.png')
-    }
-	
-else if (message.content === '!saltpyro') {
-	message.channel.bulkDelete(parseInt(1))
-	message.channel.send('Salt de Pyrolaze détecté')
-        message.channel.send('https://cdn.discordapp.com/attachments/550368143923740712/582260327534559242/Salt-baePyro.png')
-    }
-	
-else if (message.content === '!saltchevre') {
-	message.channel.bulkDelete(parseInt(1))
-	message.channel.send('Salt de LaChèvre détecté')
-        message.channel.send('https://cdn.discordapp.com/attachments/550368143923740712/582260328281407489/Salt-baeLaChevre.png')
-    }
-	
-else if (message.content === '!saltblaz') {
-	message.channel.bulkDelete(parseInt(1))
-	message.channel.send('Salt de Blazrock détecté')
-        message.channel.send('https://cdn.discordapp.com/attachments/550368143923740712/582260328323088386/Salt-baeBlazrock.png')
-    }
-	
-else if (message.content === '!saltlacer') {
-	message.channel.bulkDelete(parseInt(1))
-	message.channel.send('Salt de Lacer détecté')
-        message.channel.send('https://cdn.discordapp.com/attachments/550368143923740712/582264285951033364/Salt-baeLacer.png')
-    }
-
-else if (message.content === '!saltnitro') {
-	message.channel.bulkDelete(parseInt(1))
-	message.channel.send('Salt de NitrOmega détecté')
-        message.channel.send('https://cdn.discordapp.com/attachments/540589880250597376/582608869356732446/Salt-baeNitro.png')
-    }
-	
- })
-
-
-bot.on('message', function (message) {
-    if (message.content === '!streamowl') {
-        message.channel.send('https://www.twitch.tv/overwatchleague_fr')
-    }
- })
-
-bot.on('message', function (message) {
-    if (message.content === '!tweetow') {
-        message.channel.send('https://twitter.com/OverwatchFR')
-    }
- })
-
-bot.on('message', function (message) {
-    if (message.content === '!tweetowen') {
-        message.channel.send('https://twitter.com/PlayOverwatch')
-    }
- })
-
-bot.on('message', function (message) {
-    if (message.content === '!ytow') {
-        message.channel.send('https://www.youtube.com/channel/UC8fDAVEut58sjBXMiU76yQw')
-    }
- })
-
-bot.on('message', function (message) {
-    if (message.content === '!ytowen') {
-        message.channel.send('https://www.youtube.com/channel/UClOf1XXinvZsy4wKPAkro2A')
-    }
- })
-
-bot.on('message', function (message) {
-    if (message.content === '!carrh') {
-        message.channel.send('Veuillez taper la commande **!carr** ainsi que votre **Battletag** (en remplacant le **#** par un **-**) et avoir la carriere en publque')
-    }
- })
-
-const uneCommande = '!carr '
-
-bot.on('message', message => {
-  if (message.content.startsWith(uneCommande)) {
-    const str = message.content.substring(uneCommande.length)
-    const lien = 'https://playoverwatch.com/fr-fr/career/pc/'
-    message.channel.sendMessage(lien+str)
-  }
-});
 
 const min = '!min'
 
